@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
+import { Form, Button, Input} from 'semantic-ui-react'
 import { searchArtistInfo } from '../../../stores/artistInfo/ArtistInfoActions'
 
 class SearchForm extends Component {
@@ -12,7 +13,6 @@ class SearchForm extends Component {
     }
     this.onChange = this.onChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
-    this.formReset = this.formReset.bind(this)
   }
 
 
@@ -31,11 +31,6 @@ class SearchForm extends Component {
     this.setState({userInput: ''})
   }
 
-  formReset(event) {
-    event.preventDefault()
-
-    this.setState({userInput: ''})
-  }
  
 
   
@@ -43,15 +38,15 @@ class SearchForm extends Component {
   render() {
     return (
       <div className='search-form-container'>
-          <form onSubmit={this.onSubmit}>
-          <div>
-            <label htmlFor="">Search</label> <br/>
-            <input name='userInput'type="text" onChange={this.onChange} value={this.state.userInput}/>
-            {this.state.userInput ? <button onClick={this.formReset}>X</button> : ''}
-          </div>
-          <br/>
-          <button type='submit'>Submit</button>
-        </form>
+          <Form onSubmit={this.onSubmit} className='search-form'>
+          <Form.Field>
+            <label htmlFor="">Search for a Artist </label>
+            <Input type='text' name='userInput' placeholder='50 Cent' onChange={this.onChange} value={this.state.userInput} >
+            <input />
+            <Button type='submit'>Search</Button>
+          </Input>
+          </Form.Field>
+        </Form>
       </div>
     )
   }
@@ -62,3 +57,5 @@ SearchForm.propTypes = {
 }
 
 export default connect(null, { searchArtistInfo })(SearchForm)
+
+
