@@ -2,6 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
 
+.artist-info-card {
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10% ;
+  padding: 5%;
+  border: 1px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.artist-info-card-header {
+  font: 40px;
+  margin-bottom: 15px;
+}
+
+.artist-info-card-subtitle {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+
 .artist-list {
   margin-top: 30px;
 }
@@ -15,6 +36,12 @@
   align-items: center;
   padding-top: 5px;
   margin-top: 20px;
+}
+.bio {
+  text-align: left;
+}
+.bio-title {
+  text-align: left;
 }
 body {
   margin: 0;
@@ -48,6 +75,28 @@ code {
   background-color: white;
 }
 
+.inline {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-bottom: .5px solid black;
+  margin-bottom: 10px;
+}
+
+.item-list {
+  margin-top: 20px;
+  width: 45%;
+  border: 1px solid #14213d;
+  padding: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-left: auto;
+  margin-right: auto;
+}
+.list {
+  list-style: none;
+}
+
 .search-form {
   display: flex;
   flex-direction: column;
@@ -59,11 +108,19 @@ code {
   margin-top: 20px;
 }
 
+.subtitle-item {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+
+}
+
 .main-container {
   height: 100%;
   width: 100%;
   margin: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #e5e5e5;

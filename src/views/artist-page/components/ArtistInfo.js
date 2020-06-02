@@ -15,12 +15,11 @@ class ArtistInfo extends Component {
           <h1>{this.props.artist.artist.name}</h1>
         </div>
         <div className="artist-info-card-subtitle">
-          <p>Total Listeners:  {this.props.artist.artist.stats.listeners}</p>
-          <p>Play Count: {this.props.artist.artist.stats.playcount}</p>
+          <p className='subtitle-item'>Total Listeners:  {this.props.artist.artist.stats.listeners} Play Count: {this.props.artist.artist.stats.playcount}</p>
         </div>
         <div className="artist-info-card-bio">
-        <h3>About:</h3>
-          <p>{this.props.artist.artist.bio.summary}</p>
+        <h3 className='bio-title'>About:</h3>
+          <p className='bio'>{this.props.artist.artist.bio.summary}</p>
         </div>
       </div>
     )

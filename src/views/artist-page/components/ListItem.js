@@ -16,18 +16,22 @@ import { searchTopTracks, searchTopAlbums } from '../../../stores/artistInfo/Art
   listItem() {
    const songItem = this.props.topTracks.toptracks.track.slice(0,20).map(track => (
       <li key={track.name}>
-        <h5>{track.name}</h5>
-        <p>{track.playcount}</p>
-        <p>{track.listeners}</p>
+        <div className="inline">
+        <h5 className='inline-text'>{track.name}</h5>
+        <p className='inline-text'>{track.playcount}</p>
+        <p className='inline-text'>{track.listeners}</p>
         <a href={track.url} target='_blank' rel='noopener noreferrer'>Check out The Song!</a>
+        </div>
       </li>
     ))
 
     const albumItem = this.props.topAlbums.topalbums.album.slice(0,10).map(album => (
       <li key={album.name}>
-        <h5>{album.name}</h5>
-        <p>{album.playcount}</p>
+        <div className="inline">
+        <h5 className='inline-text'>{album.name}</h5>
+        <p className='inline-text'>{album.playcount}</p>
         <a href={album.url} target='_blank' rel='noopener noreferrer'>Check Out The Album!</a>
+        </div>
       </li>
     ))
 
@@ -48,6 +52,7 @@ import { searchTopTracks, searchTopAlbums } from '../../../stores/artistInfo/Art
     return (
       <>
         {this.listItem()}
+        
       </>
     )
   }

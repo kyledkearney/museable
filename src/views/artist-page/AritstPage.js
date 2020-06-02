@@ -34,8 +34,8 @@ class ArtistPage extends Component {
 
     return (
       <div className="App">
-        <h1>Artist</h1>
         <ArtistInfo/>
+        <div className="item-list">
         <div className='list-select'>
             <Form>
               <Form.Field>
@@ -60,6 +60,7 @@ class ArtistPage extends Component {
             </div>
         </div>
 
+      </div>
       </div>
     )
   }

@@ -6,7 +6,7 @@ import ListItem from './ListItem'
 
 
   return (
-      <ul>
+      <ul className='list'>
           <ListItem queryType={props.type} artist={props.artist}/>
       </ul>
 
