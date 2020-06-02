@@ -1,68 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Museable
 
-## Available Scripts
+**React & Redux Application that allow users to access the Lastfm API to get various artist information**
 
-In the project directory, you can run:
+---
 
-### `yarn start`
+## Local Deployment Instructions
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Prequesities API KEY FROM LastFM: https://www.last.fm/api/
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Install the dependencies with:
 
-### `yarn test`
+`$ npm install` or `$ yarn install`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+setup a .env file at the root directory
 
-### `yarn build`
+inside your .env file add:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`REACT_APP_LASTFM_APIKEY=<your-api-key-goes-here>`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Start the development server with:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`$ npm start` or `$ yarn install`
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Icebox Feature
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Ability to add songs to your Spotify and Apple Music 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+I will accomplish this by setting up an Action that requests an app autherization key from both services. Once the auth key has been recieved, a an action will be called to search up the song's / album's ID. Once the ID is recieved it will be saved into the store for when the user clicks on the add music to library button.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+When the User clicks on the corresponding 'add music' button to their preffered service, it will trigger an Action to get User Authorization from that service, Once the auth response is recieved from the music service, an action will be called to post the song ID into their library.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
