@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
+import { Grid } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 
 
@@ -13,10 +14,15 @@ class ArtistList extends Component {
 
     const artistList = (
       <div className='artist-list'>
-        <Link to={`/artist/${this.props.artist.artist.name}`}>{this.props.artist.artist.name}</Link>
+
+            <div className="artist-link-container">
+                <Link className='artist-link' to={`/artist/${this.props.artist.artist.name}`}>{this.props.artist.artist.name}</Link>
+            </div>
 
         {this.props.artist.artist.similar.artist.map(artist => (
-          <Link exact to={`/artist/${artist.name}`}>{artist.name}</Link>
+          <div className="artist-link-container" key={artist.name}>
+              <Link exact to={`/artist/${artist.name}`}>{artist.name}</Link>
+          </div>
         ))}
         
       </div>

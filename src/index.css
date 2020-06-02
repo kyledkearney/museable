@@ -1,6 +1,21 @@
 @import '~semantic-ui-css/semantic.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
+
+.artist-list {
+  margin-top: 30px;
+}
+.artist-link {
+  text-align: center;
+}
+
+.artist-link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  margin-top: 20px;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
