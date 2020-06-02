@@ -8,21 +8,13 @@ Live project viewable at: https://kyledkearney.github.io/museable/
 
 ## Local Deployment Instructions
 
-Prequesities API KEY FROM LastFM: https://www.last.fm/api/
-
 Install the dependencies with:
 
 `$ npm install` or `$ yarn install`
 
-setup a .env file at the root directory
-
-inside your .env file add:
-
-`REACT_APP_LASTFM_APIKEY=<your-api-key-goes-here>`
-
 Start the development server with:
 
-`$ npm start` or `$ yarn install`
+`$ npm start` or `$ yarn start`
 
 
 ## Icebox Feature
