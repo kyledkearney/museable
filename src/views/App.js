@@ -7,8 +7,8 @@ const HomePage = lazy(() => import('./home-page/HomePage'))
 const Artist = lazy(() => import('./artist-page/AritstPage'))
 
 const routes = {
-  'Home': '/',
-  'Artist': '/Artist', 
+  'Home': '/museable/',
+  'Artist': '/artist', 
 }
 
 

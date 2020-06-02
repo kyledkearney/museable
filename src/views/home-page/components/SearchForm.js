@@ -40,7 +40,7 @@ class SearchForm extends Component {
       <div className='search-form-container'>
           <Form onSubmit={this.onSubmit} className='search-form'>
           <Form.Field>
-            <label htmlFor="">Search for a Artist </label>
+            <label htmlFor="">Search for a Artist</label>
             <Input type='text' name='userInput' placeholder='50 Cent' onChange={this.onChange} value={this.state.userInput} >
             <input />
             <Button type='submit'>Search</Button>

@@ -5,10 +5,10 @@ export const SEARCH_TOP_TRACKS = 'SEARCH_TOP_TRACKS'
 export const SEARCH_TOP_ALBUMS = 'SEARCH_TOP_ALBUMS'
 
 
-const baseURL = 'http://ws.audioscrobbler.com/2.0/?method=artist' 
+const baseURL = 'https://ws.audioscrobbler.com/2.0/?method=artist' 
 
 export const searchArtistInfo = (selectedArtist) => dispatch => {
-  fetch(`${baseURL}.getInfo&artist=${selectedArtist}&api_key=${process.env.REACT_APP_LASTFM_APIKEY}&format=json`)
+  fetch(`${baseURL}.getInfo&artist=${selectedArtist}&api_key=130ae9b7414a48be61355c187bac5b57&format=json`)
   .then(res => res.json())
   .then(data => dispatch ({
     type: SEARCH_ARTIST_INFO,
@@ -19,7 +19,7 @@ export const searchArtistInfo = (selectedArtist) => dispatch => {
 
 export const searchTopTracks = (selectedArtist) => dispatch => {
 
-  fetch(`${baseURL}.gettoptracks&artist=${selectedArtist}&api_key=${process.env.REACT_APP_LASTFM_APIKEY}&format=json`)
+  fetch(`${baseURL}.gettoptracks&artist=${selectedArtist}&api_key=130ae9b7414a48be61355c187bac5b57&format=json`)
   .then(res => res.json())
   .then(data => dispatch ({
     type: SEARCH_TOP_TRACKS,
@@ -28,7 +28,7 @@ export const searchTopTracks = (selectedArtist) => dispatch => {
 }
 export const searchTopAlbums = (selectedArtist) => dispatch => {
 
-  fetch(`${baseURL}.gettopalbums&artist=${selectedArtist}&api_key=${process.env.REACT_APP_LASTFM_APIKEY}&format=json`)
+  fetch(`${baseURL}.gettopalbums&artist=${selectedArtist}&api_key=130ae9b7414a48be61355c187bac5b57&format=json`)
   .then(res => res.json())
   .then(data => dispatch ({
     type: SEARCH_TOP_ALBUMS,
