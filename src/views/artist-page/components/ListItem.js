@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
 import { searchTopTracks, searchTopAlbums } from '../../../stores/artistInfo/ArtistInfoActions'
+import { Table } from 'semantic-ui-react'
 const numeral = require('numeral')
 
  class ListItem extends Component {
@@ -16,14 +17,13 @@ const numeral = require('numeral')
 
   listItem() {
    const songItem = this.props.topTracks.toptracks.track.slice(0,20).map(track => (
-      <li key={track.name}>
-        <div className="inline">
-        <h5 className='inline-text'>{track.name}</h5>
-        <p className='inline-text'>{numeral(track.playcount).format('0,0')}</p>
-        <p className='inline-text'>{numeral(track.listeners).format('0,0')}</p>
-        <a href={track.url} target='_blank' rel='noopener noreferrer'>Check out The Song!</a>
-        </div>
-      </li>
+      <Table.Row key={track.name}>
+        <Table.Cell>{track.name}</Table.Cell>
+        <Table.Cell className='inline-text'>{numeral(track.playcount).format('0,0')}</Table.Cell>
+        <Table.Cell className='inline-text'>{numeral(track.listeners).format('0,0')}</Table.Cell>
+        <Table.Cell><a href={track.url} target='_blank' rel='noopener noreferrer'>Check out The Song!</a></Table.Cell>
+   
+      </Table.Row>
     ))
 
     const albumItem = this.props.topAlbums.topalbums.album.slice(0,10).map(album => (

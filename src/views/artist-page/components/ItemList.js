@@ -30,8 +30,11 @@ import { Table } from 'semantic-ui-react'
             {props.type === 'TopTracks' ? songHeader : albumHeader}
             </Table.Row>
             </Table.Header>
+            <Table.Body>
+                <ListItem queryType={props.type} artist={props.artist}/>
+            </Table.Body>
         </Table>
-          <ListItem queryType={props.type} artist={props.artist}/>
+        
       </div>
 
   )
