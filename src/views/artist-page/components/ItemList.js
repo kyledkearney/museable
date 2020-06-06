@@ -24,12 +24,13 @@ import { Table } from 'semantic-ui-react'
 
   return (
       <div className='list'>
+        <Table celled>
             <Table.Header>
             <Table.Row>
             {props.type === 'TopTracks' ? songHeader : albumHeader}
-
             </Table.Row>
             </Table.Header>
+        </Table>
           <ListItem queryType={props.type} artist={props.artist}/>
       </div>
 

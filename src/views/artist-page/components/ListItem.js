@@ -30,7 +30,7 @@ const numeral = require('numeral')
       <li key={album.name}>
         <div className="inline">
         <h5 className='inline-text'>{album.name}</h5>
-        <p className='inline-text'>{album.playcount}</p>
+        <p className='inline-text'>{numeral(album.playcount).format('0,0')}</p>
         <a href={album.url} target='_blank' rel='noopener noreferrer'>Check Out The Album!</a>
         </div>
       </li>

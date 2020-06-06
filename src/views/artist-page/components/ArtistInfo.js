@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
+const numeral = require('numeral')
 
 class ArtistInfo extends Component {
   
@@ -15,7 +16,7 @@ class ArtistInfo extends Component {
           <h1>{this.props.artist.artist.name}</h1>
         </div>
         <div className="artist-info-card-subtitle">
-          <p className='subtitle-item'>Total Listeners:  {this.props.artist.artist.stats.listeners} Play Count: {this.props.artist.artist.stats.playcount}</p>
+          <p className='subtitle-item'>Total Listeners:  {numeral(this.props.artist.artist.stats.listeners).format('0,0')} Play Count: {numeral(this.props.artist.artist.stats.playcount).format('0,0')}</p>
         </div>
         <div className="artist-info-card-bio">
         <h3 className='bio-title'>About:</h3>
