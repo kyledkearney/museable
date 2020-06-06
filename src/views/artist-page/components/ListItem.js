@@ -18,10 +18,9 @@ const numeral = require('numeral')
   listItem() {
    const songItem = this.props.topTracks.toptracks.track.slice(0,20).map(track => (
       <Table.Row key={track.name}>
-        <Table.Cell>{track.name}</Table.Cell>
+        <Table.Cell><a href={track.url} target='_blank' rel='noopener noreferrer'>{track.name}</a></Table.Cell>
         <Table.Cell className='inline-text'>{numeral(track.playcount).format('0,0')}</Table.Cell>
         <Table.Cell className='inline-text'>{numeral(track.listeners).format('0,0')}</Table.Cell>
-        <Table.Cell><a href={track.url} target='_blank' rel='noopener noreferrer'>Check out The Song!</a></Table.Cell>
    
       </Table.Row>
     ))

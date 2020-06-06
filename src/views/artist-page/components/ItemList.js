@@ -9,7 +9,8 @@ import { Table } from 'semantic-ui-react'
      <>   
         <Table.HeaderCell>Album Title</Table.HeaderCell>
         <Table.HeaderCell>Play Count</Table.HeaderCell>
-        <Table.HeaderCell>Last FM Link</Table.HeaderCell>
+        <Table.HeaderCell>+ Spotify</Table.HeaderCell>
+        <Table.HeaderCell>+ Apple Music</Table.HeaderCell>
      </>   
     )
     const songHeader = (
@@ -17,7 +18,8 @@ import { Table } from 'semantic-ui-react'
         <Table.HeaderCell>Song Title</Table.HeaderCell>
         <Table.HeaderCell>Play Count</Table.HeaderCell>
         <Table.HeaderCell>Listeners</Table.HeaderCell>
-        <Table.HeaderCell>Last FM Link</Table.HeaderCell>
+        <Table.HeaderCell>+ Spotify</Table.HeaderCell>
+        <Table.HeaderCell>+ Apple Music</Table.HeaderCell>
      </>   
     )
 
