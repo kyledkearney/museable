@@ -1,6 +1,9 @@
 @import '~semantic-ui-css/semantic.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
+html {
+  background-color: #e5e5e5;
+}
 
 .artist-info-card {
   width: 45%;
@@ -10,6 +13,7 @@
   padding: 5%;
   border: 1px solid black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #ffffff;
 }
 
 .artist-info-card-header {
@@ -92,9 +96,11 @@ code {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-left: auto;
   margin-right: auto;
+  background-color: #ffffff;
 }
 .list {
   list-style: none;
+  background-color: #ffffff;
 }
 
 .search-form {
@@ -124,6 +130,10 @@ code {
   justify-content: center;
   align-items: center;
   background-color: #e5e5e5;
+}
+
+.top-items-container {
+  background-color: #ffffff;
 }
 
 #root {
