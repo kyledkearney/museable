@@ -26,13 +26,10 @@ const numeral = require('numeral')
     ))
 
     const albumItem = this.props.topAlbums.topalbums.album.slice(0,10).map(album => (
-      <li key={album.name}>
-        <div className="inline">
-        <h5 className='inline-text'>{album.name}</h5>
-        <p className='inline-text'>{numeral(album.playcount).format('0,0')}</p>
-        <a href={album.url} target='_blank' rel='noopener noreferrer'>Check Out The Album!</a>
-        </div>
-      </li>
+      <Table.Row key={album.name}>
+        <Table.Cell className='inline-text'><a href={album.url} target='_blank' rel='noopener noreferrer'>{album.name}</a></Table.Cell>
+        <Table.Cell className='inline-text'>{numeral(album.playcount).format('0,0')}</Table.Cell>
+      </Table.Row>
     ))
 
 
