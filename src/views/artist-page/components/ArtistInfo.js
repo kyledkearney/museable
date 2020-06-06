@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 const numeral = require('numeral')
 
 class ArtistInfo extends Component {
@@ -21,6 +22,10 @@ class ArtistInfo extends Component {
         <div className="artist-info-card-bio">
         <h3 className='bio-title'>About:</h3>
           <p className='bio'>{this.props.artist.artist.bio.summary}</p>
+        </div>
+        <br/>
+        <div className="return-home-container">
+          <Link exact to={`/museable`}>Search for another artist</Link>
         </div>
       </div>
     )
