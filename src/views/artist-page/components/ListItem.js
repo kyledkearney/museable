@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { PropTypes } from 'prop-types'
 import { connect } from 'react-redux'
 import { searchTopTracks, searchTopAlbums } from '../../../stores/artistInfo/ArtistInfoActions'
+const numeral = require('numeral')
 
  class ListItem extends Component {
   componentDidMount() {
@@ -18,8 +19,8 @@ import { searchTopTracks, searchTopAlbums } from '../../../stores/artistInfo/Art
       <li key={track.name}>
         <div className="inline">
         <h5 className='inline-text'>{track.name}</h5>
-        <p className='inline-text'>{track.playcount}</p>
-        <p className='inline-text'>{track.listeners}</p>
+        <p className='inline-text'>{numeral(track.playcount).format('0,0')}</p>
+        <p className='inline-text'>{numeral(track.listeners).format('0,0')}</p>
         <a href={track.url} target='_blank' rel='noopener noreferrer'>Check out The Song!</a>
         </div>
       </li>
