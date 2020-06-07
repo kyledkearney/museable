@@ -3,20 +3,20 @@ import * as ArtistInfoActions from './ArtistInfoActions'
 
 const initialState = {
   artist: {
-      name: '',
+      name: 'null',
       stats: {
-        listeners: '',
-        playcount: ''
+        listeners: 'null',
+        playcount: 'null'
       },
       similar: {
         artist:[
             {
-              name: '',
+              name: 'null',
             }
         ]
       },
       bio: {
-        summary: '',
+        summary: 'null',
       }
 
   },
@@ -25,10 +25,10 @@ const initialState = {
     toptracks: {
       track: [
           {
-            name: '',
-            url: '',
-            playcount: '',
-            listeners: '',
+            name: 'null',
+            url: 'null',
+            playcount: 'null',
+            listeners: 'null',
           }
       ]
     }
@@ -37,9 +37,9 @@ const initialState = {
     topalbums: {
       album: [
           {
-            name: '',
-            url: '',
-            playcount: '',
+            name: 'null',
+            url: 'null',
+            playcount: 'null',
           }
       ]
     }
