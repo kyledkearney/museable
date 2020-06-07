@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1aeb04c0d2a1948c8314768807b09906",
+    "revision": "822ea7e04f94486c535c53a60763c1df",
     "url": "/museable/index.html"
   },
   {
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/museable/static/js/4.cc9954af.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c997c262737d5bb17a4a",
-    "url": "/museable/static/js/5.562845b3.chunk.js"
+    "revision": "02ae46bf1dd21806b5b3",
+    "url": "/museable/static/js/5.6a210e99.chunk.js"
   },
   {
     "revision": "779cedf646cec540563c",
@@ -48,8 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/museable/static/js/main.f3cae40a.chunk.js"
   },
   {
-    "revision": "13397ab468316cc086aa",
-    "url": "/museable/static/js/runtime-main.a90d0865.js"
+    "revision": "4425392fe02ab022e6b7",
+    "url": "/museable/static/js/runtime-main.e1b0a018.js"
   },
   {
     "revision": "13db00b7a34fee4d819ab7f9838cc428",

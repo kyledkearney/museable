@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/museable/precache-manifest.40dc5d9fbe5ce2b11e2967c33dd6bab9.js"
+  "/museable/precache-manifest.309c2115e3dd41102651bb0cc0386b85.js"
 );
 
 self.addEventListener('message', (event) => {
