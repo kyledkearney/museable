@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import SearchForm from './components/SearchForm'
 import ArtistList from './components/ArtistList'
-import { Grid } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 
 class Home extends Component {
